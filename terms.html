@@ -46,8 +46,6 @@ a { color: var(--primary); }
 header.site { padding: 20px 0; border-bottom: 1px solid var(--divider); background: var(--surface); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; max-width: 960px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--navy); text-decoration: none; }
-.brand-mark { width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(135deg, var(--primary-light), var(--secondary)); display: flex; align-items: center; justify-content: center; }
-.brand-mark svg { width: 18px; height: 18px; }
 nav.site-nav a { margin-left: 22px; color: var(--text-soft); text-decoration: none; font-weight: 600; font-size: 14px; }
 nav.site-nav a:hover { color: var(--primary); }
 main { padding: 48px 0 80px; }
@@ -69,11 +67,7 @@ footer.site a:hover { color: var(--primary); }
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <span class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 4L3 11.5L10.5 14M21 4L13.5 21L10.5 14M21 4L10.5 14" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
+      <img src="assets/travelly-icon-512.png" alt="Travelly" width="32" height="32" style="width:32px;height:32px;border-radius:9px;display:block">
       Travelly
     </a>
     <nav class="site-nav">
