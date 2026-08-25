@@ -42,6 +42,11 @@
     section[style*="max-width:1000px;margin:0 auto;display:flex;gap:56px;align-items:center"] > div,
     section[style*="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:430px 1fr"] > div{display:block !important}
   }
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
   @media (max-width:700px){
     h1{font-size:38px !important;line-height:1.05 !important}
     h2{font-size:28px !important}
@@ -146,7 +151,7 @@
     </div>
   </section>
 
-  <section id="features" style="background:#F6F5F0;color:#17324D;padding:66px 56px">
+  <section id="features" class="reveal" style="background:#F6F5F0;color:#17324D;padding:66px 56px">
     <div style="max-width:1000px;margin:0 auto">
       <h2 style="font-size:40px;font-weight:800;color:#12344D;margin:0 0 8px;letter-spacing:-.02em;max-width:560px;text-wrap:pretty">What makes Travelly different</h2>
       <p style="margin:0 0 44px;font-size:16px;color:#6B7F8F">Six things, in the order they matter.</p>
@@ -161,7 +166,7 @@
     </div>
   </section>
 
-    <section style="padding:72px 56px;background:#0F2A3D">
+    <section class="reveal" style="padding:72px 56px;background:#0F2A3D">
     <div style="max-width:1060px;margin:0 auto">
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px">
         <h2 style="font-size:36px;font-weight:800;color:#fff;margin:0;letter-spacing:-.02em">Six screens, in order</h2>
@@ -294,7 +299,7 @@
     </div>
   </section>
   
-  <section style="background:#F6F5F0;color:#17324D;padding:70px 56px;border-top:1px solid #E3E9E8">
+  <section class="reveal" style="background:#F6F5F0;color:#17324D;padding:70px 56px;border-top:1px solid #E3E9E8">
     <div style="max-width:1000px;margin:0 auto;display:flex;gap:56px;align-items:center">
       <div style="flex:1;max-width:520px">
         <div style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#087F8C;margin-bottom:14px">ITINERARY</div>
@@ -416,7 +421,7 @@
     </div>
   </section>
 
-  <section style="background:#0F2A3D;padding:70px 56px;border-top:1px solid rgba(255,255,255,.06)">
+  <section class="reveal" style="background:#0F2A3D;padding:70px 56px;border-top:1px solid rgba(255,255,255,.06)">
     <div style="max-width:1000px;margin:0 auto;display:flex;gap:56px;align-items:center">
       <div style="flex:1;max-width:480px">
         <div style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#55C8C4;margin-bottom:14px">FLIGHT TRACKING</div>
@@ -483,7 +488,7 @@
     </div>
   </section>
 
-  <section style="background:#0F2A3D;padding:70px 56px">
+  <section class="reveal" style="background:#0F2A3D;padding:70px 56px">
     <div style="max-width:1000px;margin:0 auto;display:flex;gap:56px;align-items:center">
         <div style="width:415px;box-sizing:border-box;padding:11px;background:#12344D;border-radius:66px;box-shadow:0 30px 70px rgba(18,52,77,.26);flex:none">
           <div style="width:393px;height:852px;background:#F6F5F0;border-radius:55px;overflow:hidden;position:relative;display:flex;flex-direction:column">
@@ -563,7 +568,7 @@
     </div>
   </section>
 
-  <section id="group-trips" style="background:#F6F5F0;color:#17324D;padding:70px 56px">
+  <section id="group-trips" class="reveal" style="background:#F6F5F0;color:#17324D;padding:70px 56px">
     <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:430px 1fr;gap:48px;align-items:center">
       <div style="width:415px;box-sizing:border-box;padding:11px;background:#12344D;border-radius:66px;box-shadow:0 30px 70px rgba(18,52,77,.26)">
         <div style="width:393px;height:852px;background:#F6F5F0;border-radius:55px;overflow:hidden;position:relative;display:flex;flex-direction:column">
@@ -643,7 +648,7 @@
     </div>
   </section>
 
-  <section style="background:#F6F5F0;color:#17324D;padding:70px 56px;border-top:1px solid #E3E9E8">
+  <section class="reveal" style="background:#F6F5F0;color:#17324D;padding:70px 56px;border-top:1px solid #E3E9E8">
     <div style="max-width:1000px;margin:0 auto">
       <div style="display:flex;gap:56px;align-items:flex-start;margin:0 0 44px">
         <div style="flex:1;max-width:560px">
@@ -810,7 +815,7 @@
     </div>
   </section>
 
-  <section id="waitlist" style="padding:80px 56px;background:linear-gradient(135deg,#1E6077,#12344D);text-align:center">
+  <section id="waitlist" class="reveal" style="padding:80px 56px;background:linear-gradient(135deg,#1E6077,#12344D);text-align:center">
     <h2 style="font-size:46px;font-weight:800;color:#fff;margin:0 0 14px;letter-spacing:-.025em">Get early access</h2>
     <p style="margin:0 auto 30px;max-width:480px;font-size:16px;line-height:1.65;color:#B9CBD4">A small, invite-only test is running ahead of the Google Play launch. Leave your email and we'll let you know when a spot opens up.</p>
     <form class="waitlist-form" action="https://formspree.io/f/xbgrbrpg" method="POST" style="display:flex;gap:10px;max-width:440px;margin:0 auto">
@@ -860,5 +865,23 @@ document.querySelectorAll('.waitlist-form').forEach(function (form) {
       });
   });
 });
+
+if ('IntersectionObserver' in window) {
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    revealObserver.observe(el);
+  });
+} else {
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    el.classList.add('is-visible');
+  });
+}
 </script>
 </body></html>
