@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travelly — Stop guessing if a trip fits your budget</title>
-<meta name="description" content="Travelly checks real flight and hotel prices against your budget ceiling before you commit — no surprises at checkout. Currently in private testing ahead of Google Play launch.">
+<meta name="description" content="Travelly checks real flight and hotel prices against your budget before you commit. Free to start on Android. Trip Pass ₱199, Pro ₱1,500 a year.">
 <link rel="canonical" href="https://gettravelly.com/">
 <link rel="icon" href="assets/travelly-icon-512.png">
 
@@ -12,12 +12,12 @@
 <meta property="og:site_name" content="Travelly">
 <meta property="og:url" content="https://gettravelly.com/">
 <meta property="og:title" content="Travelly — Stop guessing if a trip fits your budget">
-<meta property="og:description" content="Travelly checks real flight and hotel prices against your budget ceiling before you commit — no surprises at checkout. Currently in private testing ahead of Google Play launch.">
+<meta property="og:description" content="Travelly checks real flight and hotel prices against your budget before you commit. Free to start on Android. Trip Pass ₱199, Pro ₱1,500 a year.">
 <meta property="og:image" content="https://gettravelly.com/assets/travelly-icon-512.png">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Travelly — Stop guessing if a trip fits your budget">
-<meta name="twitter:description" content="Travelly checks real flight and hotel prices against your budget ceiling before you commit — no surprises at checkout.">
+<meta name="twitter:description" content="Travelly checks real flight and hotel prices against your budget before you commit. Free to start on Android. Trip Pass ₱199, Pro ₱1,500 a year.">
 <meta name="twitter:image" content="https://gettravelly.com/assets/travelly-icon-512.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +44,12 @@
     section[style*="max-width:1000px;margin:0 auto;display:flex;gap:56px;align-items:center"] > div,
     section[style*="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:430px 1fr"] > div{display:block !important}
   }
+  .price-select:focus-visible,.faq summary:focus-visible{outline:2px solid #26A6A1;outline-offset:3px;border-radius:8px}
+  .faq summary{list-style:none;cursor:pointer}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq-icon{transition:transform .2s}
+  .faq details[open] .faq-icon{transform:rotate(45deg)}
+  @media (prefers-reduced-motion:reduce){.faq-icon{transition:none}}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
   .reveal.is-visible{opacity:1;transform:translateY(0)}
   @media (prefers-reduced-motion:reduce){
@@ -62,6 +68,130 @@
     .site-header-link{display:none}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gettravelly.com/#organization",
+      "name": "Travelly",
+      "url": "https://gettravelly.com/",
+      "logo": "https://gettravelly.com/assets/travelly-icon-512.png",
+      "email": "gettravelly@gmail.com",
+      "sameAs": [
+        "https://www.facebook.com/gettravelly/"
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://gettravelly.com/#app",
+      "name": "Travelly",
+      "operatingSystem": "Android",
+      "applicationCategory": "TravelApplication",
+      "description": "Travelly checks real flight and hotel prices against your travel budget and builds a day-by-day plan that fits. Built for Philippine travelers, with prices in peso.",
+      "url": "https://gettravelly.com/",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.gettravelly.app",
+      "image": "https://gettravelly.com/assets/travelly-icon-512.png",
+      "publisher": {
+        "@id": "https://gettravelly.com/#organization"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "PHP",
+          "description": "3 AI budget analyses a month, 3 saved analyses, and 2 live price refreshes per trip."
+        },
+        {
+          "@type": "Offer",
+          "name": "Trip Pass",
+          "price": "199",
+          "priceCurrency": "PHP",
+          "description": "Full access for one trip for 30 days. One-time purchase that never renews."
+        },
+        {
+          "@type": "Offer",
+          "name": "Travelly Pro",
+          "price": "1500",
+          "priceCurrency": "PHP",
+          "description": "Unlimited trips and AI planning, billed yearly.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "1500",
+            "priceCurrency": "PHP",
+            "billingDuration": "P1Y",
+            "unitText": "year"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gettravelly.com/#pricing-faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Travelly free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The free plan includes 3 AI budget analyses a month, 3 saved analyses, and 2 live price refreshes per trip. Minimum-budget warnings, source labels, and expense safety are never behind a paywall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Trip Pass and Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trip Pass costs ₱199 and unlocks everything for one trip for 30 days, with no subscription. Pro costs ₱1,500 a year and covers unlimited trips. If you plan 8 or more trips in a year, Pro costs less than buying a Trip Pass for each one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Trip Pass renew automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Trip Pass is a one-time purchase and never renews. Buy another only when you plan another trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have a Trip Pass for more than one trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each Trip Pass covers its own trip, so you can hold passes for several trips at the same time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cancel Travelly Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cancel anytime in the Google Play app under Payments & subscriptions. You keep Pro until the end of the year you already paid for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are prices in my currency approximate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travelly is priced in Philippine peso. Google Play sets the final price for your country, so the conversions on this page are a guide. You always see the exact local price in Google Play before you pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Travelly on iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. Travelly is available on Android through Google Play. Leave your email on this page and we will let you know when the iPhone version is ready."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <div class="site-header" style="display:flex;align-items:center;justify-content:space-between;padding:20px 56px;max-width:1240px;margin:0 auto">
@@ -71,6 +201,7 @@
       <a href="#features" class="site-header-link" style="color:#8FA9B5;text-decoration:none">Product</a>
       <a href="#group-trips" class="site-header-link" style="color:#8FA9B5;text-decoration:none">Group trips</a>
       <a href="#features" class="site-header-link" style="color:#8FA9B5;text-decoration:none">Sourcing</a>
+      <a href="#pricing" class="site-header-link" style="color:#8FA9B5;text-decoration:none">Pricing</a>
       <a href="https://play.google.com/store/apps/details?id=com.gettravelly.app" style="background:#26A6A1;color:#0F2A3D;padding:9px 18px;border-radius:100px;text-decoration:none;font-weight:800;white-space:nowrap">Get the app</a>
     </div>
   </div>
@@ -816,6 +947,29 @@
     </div>
   </section>
 
+  <section id="pricing" class="reveal" aria-labelledby="pricing-title" style="background:#FFFFFF;color:#17324D;padding:72px 56px;border-top:1px solid #E3E9E8">
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#1E7F7B;margin-bottom:12px">Pricing</div>
+      <h2 id="pricing-title" style="font-size:40px;font-weight:800;color:#12344D;margin:0 0 10px;letter-spacing:-.02em;max-width:640px;text-wrap:balance">Free to start. Pay per trip or per year.</h2>
+      <p style="margin:0 0 28px;font-size:16px;line-height:1.65;color:#5C6F7E;max-width:580px">Plan with the free version for as long as you like. Upgrade only when a trip needs live price monitoring, unlimited AI help, or exports.</p>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px">
+        <label for="currency" style="font-size:14px;font-weight:600;color:#12344D">Show prices in</label>
+        <select id="currency" name="currency" class="price-select" style="font:600 14px 'Outfit',sans-serif;color:#12344D;background:#fff;border:1px solid #D5DFDE;border-radius:12px;padding:10px 14px;max-width:100%"><optgroup label="Philippines"><option value="PHP" data-name="Philippine peso" selected>PHP — Philippine peso</option></optgroup><optgroup label="Southeast Asia"><option value="SGD" data-name="Singapore dollar">SGD — Singapore dollar</option><option value="MYR" data-name="Malaysian ringgit">MYR — Malaysian ringgit</option><option value="THB" data-name="Thai baht">THB — Thai baht</option><option value="IDR" data-name="Indonesian rupiah">IDR — Indonesian rupiah</option><option value="VND" data-name="Vietnamese dong">VND — Vietnamese dong</option></optgroup><optgroup label="East Asia"><option value="JPY" data-name="Japanese yen">JPY — Japanese yen</option><option value="KRW" data-name="South Korean won">KRW — South Korean won</option><option value="HKD" data-name="Hong Kong dollar">HKD — Hong Kong dollar</option><option value="TWD" data-name="New Taiwan dollar">TWD — New Taiwan dollar</option><option value="CNY" data-name="Chinese yuan">CNY — Chinese yuan</option></optgroup><optgroup label="Middle East"><option value="AED" data-name="UAE dirham">AED — UAE dirham</option><option value="SAR" data-name="Saudi riyal">SAR — Saudi riyal</option><option value="QAR" data-name="Qatari riyal">QAR — Qatari riyal</option><option value="KWD" data-name="Kuwaiti dinar">KWD — Kuwaiti dinar</option></optgroup><optgroup label="Americas, Europe &amp; Oceania"><option value="USD" data-name="US dollar">USD — US dollar</option><option value="CAD" data-name="Canadian dollar">CAD — Canadian dollar</option><option value="EUR" data-name="Euro">EUR — Euro</option><option value="GBP" data-name="British pound">GBP — British pound</option><option value="AUD" data-name="Australian dollar">AUD — Australian dollar</option><option value="NZD" data-name="New Zealand dollar">NZD — New Zealand dollar</option></optgroup><optgroup label="South Asia"><option value="INR" data-name="Indian rupee">INR — Indian rupee</option></optgroup></select>
+        <span id="currency-status" aria-live="polite" style="font-size:13px;color:#5C6F7E"></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch"><article style="background:#fff;border:1px solid #E3E9E8;border-radius:20px;padding:30px 28px;display:flex;flex-direction:column"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px"><h3 style="font-size:19px;font-weight:700;color:#12344D;margin:0">Free</h3></div><p style="margin:0 0 18px;font-size:14px;line-height:1.6;color:#5C6F7E">Everything you need to check whether a trip fits your budget.</p><div style="display:flex;align-items:baseline;flex-wrap:wrap;column-gap:8px;margin-bottom:4px"><span style="font-size:42px;font-weight:800;color:#12344D;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums">Free</span><span style="font-size:14px;color:#5C6F7E">forever</span></div><div style="font-size:13px;line-height:1.5;color:#5C6F7E;min-height:20px;margin-bottom:22px">No card required.</div><ul style="list-style:none;margin:0;padding:0;display:grid;gap:11px"><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>3 AI budget analyses a month</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>3 saved analyses</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>2 live price refreshes per trip</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Minimum-budget warnings and expense safety</li></ul></article><article style="background:#fff;border:1px solid #E3E9E8;border-radius:20px;padding:30px 28px;display:flex;flex-direction:column"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px"><h3 style="font-size:19px;font-weight:700;color:#12344D;margin:0">Trip Pass</h3></div><p style="margin:0 0 18px;font-size:14px;line-height:1.6;color:#5C6F7E">For one upcoming trip, without a subscription.</p><div style="display:flex;align-items:baseline;flex-wrap:wrap;column-gap:8px;margin-bottom:4px"><span class="price-amount" data-php="199" style="font-size:42px;font-weight:800;color:#12344D;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums">₱199</span><span style="font-size:14px;color:#5C6F7E">one trip · 30 days</span></div><div style="font-size:13px;line-height:1.5;color:#5C6F7E;min-height:20px;margin-bottom:22px">One-time purchase. Never renews.</div><ul style="list-style:none;margin:0;padding:0;display:grid;gap:11px"><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Unlimited what-if comparisons</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Provider comparison + 6 live refreshes</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Full AI chat, curated places, and exports</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Photos and files on every stop and journal entry</li></ul></article><article style="background:#fff;border:2px solid #26A6A1;border-radius:20px;padding:29px 27px;display:flex;flex-direction:column"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px"><h3 style="font-size:19px;font-weight:700;color:#12344D;margin:0">Travelly Pro</h3><span style="font-size:11.5px;font-weight:700;color:#1E7F7B;background:rgba(38,166,161,.12);padding:4px 10px;border-radius:100px;white-space:nowrap">Frequent travelers</span></div><p style="margin:0 0 18px;font-size:14px;line-height:1.6;color:#5C6F7E">For frequent travelers, couples, and families.</p><div style="display:flex;align-items:baseline;flex-wrap:wrap;column-gap:8px;margin-bottom:4px"><span class="price-amount" data-php="1500" style="font-size:42px;font-weight:800;color:#12344D;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums">₱1,500</span><span style="font-size:14px;color:#5C6F7E">per year</span></div><div style="font-size:13px;line-height:1.5;color:#5C6F7E;min-height:20px;margin-bottom:22px">That’s <span class="price-inline" data-php="125" style="font-variant-numeric:tabular-nums">₱125</span> a month, billed yearly.</div><ul style="list-style:none;margin:0;padding:0;display:grid;gap:11px"><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Unlimited trips and AI decisions</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Unlimited AI chat, priority model</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>20 live provider refreshes every month</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Curated places, detailed comparison, PDF export</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#17324D"><span aria-hidden="true" style="font-family:'Material Symbols Rounded';font-size:18px;line-height:1.3;color:#26A6A1;flex:none">check</span>Photos and files on every stop and journal entry</li></ul></article></div>
+      <div style="margin-top:30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <a href="https://play.google.com/store/apps/details?id=com.gettravelly.app" class="play-badge" aria-label="Get Travelly on Google Play"><img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="165" height="49" style="height:49px;width:auto;display:block"></a>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#5C6F7E;max-width:480px">Trip Pass and Pro are bought inside the app, through Google Play. Minimum-budget warnings, source labels, and expense safety are never paywalled.</p>
+      </div>
+      <p style="margin:20px 0 0;font-size:12.5px;line-height:1.6;color:#5C6F7E;max-width:720px">Prices are set in Philippine peso (PHP). Other currencies are approximate conversions using exchange rates from 15 September 2026, provided by <a href="https://www.exchangerate-api.com" rel="noopener" style="color:inherit">ExchangeRate-API</a>. Google Play sets the final price for your country and shows it before you pay.</p>
+      <div style="margin-top:56px">
+        <h3 style="font-size:24px;font-weight:800;color:#12344D;margin:0 0 14px;letter-spacing:-.01em">Pricing questions</h3>
+        <div class="faq" style="border-top:1px solid #E3E9E8"><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">Is Travelly free?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Yes. The free plan includes 3 AI budget analyses a month, 3 saved analyses, and 2 live price refreshes per trip. Minimum-budget warnings, source labels, and expense safety are never behind a paywall.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">What is the difference between Trip Pass and Pro?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Trip Pass costs ₱199 and unlocks everything for one trip for 30 days, with no subscription. Pro costs ₱1,500 a year and covers unlimited trips. If you plan 8 or more trips in a year, Pro costs less than buying a Trip Pass for each one.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">Does Trip Pass renew automatically?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">No. Trip Pass is a one-time purchase and never renews. Buy another only when you plan another trip.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">Can I have a Trip Pass for more than one trip?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Yes. Each Trip Pass covers its own trip, so you can hold passes for several trips at the same time.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">How do I cancel Travelly Pro?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Cancel anytime in the Google Play app under Payments &amp; subscriptions. You keep Pro until the end of the year you already paid for.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">Why are prices in my currency approximate?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Travelly is priced in Philippine peso. Google Play sets the final price for your country, so the conversions on this page are a guide. You always see the exact local price in Google Play before you pay.</p></details><details style="border-bottom:1px solid #E3E9E8"><summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-size:16px;font-weight:700;color:#12344D">Is Travelly on iPhone?<span aria-hidden="true" class="faq-icon" style="font-family:'Material Symbols Rounded';font-size:22px;color:#26A6A1;flex:none">add</span></summary><p style="margin:0 0 18px;padding:0 2px;font-size:15px;line-height:1.7;color:#5C6F7E;max-width:680px">Not yet. Travelly is available on Android through Google Play. Leave your email on this page and we will let you know when the iPhone version is ready.</p></details></div>
+      </div>
+    </div>
+  </section>
+
   <section id="waitlist" class="reveal" style="padding:80px 56px;background:linear-gradient(135deg,#1E6077,#12344D);text-align:center">
     <h2 style="font-size:46px;font-weight:800;color:#fff;margin:0 0 14px;letter-spacing:-.025em">Travelly is on Android today</h2>
     <p style="margin:0 auto 30px;max-width:480px;font-size:16px;line-height:1.65;color:#B9CBD4">Free to start on Google Play. On iPhone? Leave your email and we'll tell you the day iOS lands — nothing else.</p>
@@ -885,5 +1039,44 @@ if ('IntersectionObserver' in window) {
     el.classList.add('is-visible');
   });
 }
+</script>
+<script>
+(function () {
+  var RATES = {"PHP": 1, "USD": 0.01589, "EUR": 0.013779, "GBP": 0.011791, "JPY": 2.457252, "KRW": 21.391265, "SGD": 0.020213, "MYR": 0.064862, "THB": 0.528707, "IDR": 280.860505, "VND": 412.527842, "HKD": 0.124825, "TWD": 0.505032, "CNY": 0.1067, "AUD": 0.022277, "CAD": 0.022119, "AED": 0.058379, "SAR": 0.059611, "QAR": 0.057863, "KWD": 0.004896, "NZD": 0.027511, "INR": 1.521389};
+  // Distinct symbols only. USD, SGD, AUD, CAD, HKD, TWD and NZD would all render as a bare "$",
+  // and CNY shares its symbol with JPY, so those fall back to the ISO code.
+  var SYMBOL = {PHP: 1, EUR: 1, GBP: 1, JPY: 1, KRW: 1, INR: 1, THB: 1, VND: 1};
+  var select = document.getElementById("currency");
+  var status = document.getElementById("currency-status");
+  if (!select || !status) return;
+  function format(value, code) {
+    var whole = value >= 100;
+    var opts = {style: "currency", currency: code, minimumFractionDigits: whole ? 0 : 2,
+                maximumFractionDigits: whole ? 0 : 2, currencyDisplay: SYMBOL[code] ? "narrowSymbol" : "code"};
+    try { return new Intl.NumberFormat("en", opts).format(value); }
+    catch (e) { opts.currencyDisplay = "code"; return new Intl.NumberFormat("en", opts).format(value); }
+  }
+  function apply(code) {
+    if (!RATES[code]) code = "PHP";
+    var approx = code !== "PHP";
+    document.querySelectorAll("[data-php]").forEach(function (el) {
+      var text = (approx ? "≈ " : "") + format(Number(el.getAttribute("data-php")) * RATES[code], code);
+      el.textContent = text;
+      // Long conversions would overflow a card at the headline size.
+      if (el.classList.contains("price-amount")) el.style.fontSize = text.length > 12 ? "28px" : text.length > 8 ? "34px" : "42px";
+    });
+    var name = select.options[select.selectedIndex].getAttribute("data-name");
+    status.textContent = approx ? "Approximate, in " + name + ". Google Play shows your exact price." : "";
+  }
+  // PHP is what the HTML ships and what the structured data declares, so crawlers and first-time
+  // visitors always see identical prices. Only a choice the visitor made themselves changes that.
+  var saved = null;
+  try { saved = localStorage.getItem("travelly_currency"); } catch (e) {}
+  if (saved && RATES[saved] && saved !== "PHP") { select.value = saved; apply(saved); }
+  select.addEventListener("change", function () {
+    try { localStorage.setItem("travelly_currency", select.value); } catch (e) {}
+    apply(select.value);
+  });
+})();
 </script>
 </body></html>
